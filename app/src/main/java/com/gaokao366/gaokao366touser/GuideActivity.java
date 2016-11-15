@@ -21,6 +21,7 @@ public class GuideActivity extends AppCompatActivity {
         sgb();
 
 
+
     }
 
     private void sgb() {
