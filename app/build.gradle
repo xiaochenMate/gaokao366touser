@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+    defaultConfig {
+        applicationId "com.gaokao366.gaokao366touser"
+        minSdkVersion 18
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    testCompile 'junit:junit:4.12'
+
+
+
+    compile "com.andkulikov:transitionseverywhere:1.6.9"
+    compile 'com.zhy:autolayout:1.4.5'
+
+    compile files('libs/fastjson-1.1.26.jar')
+    compile files('libs/universal-image-loader-1.9.3.jar')
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile files('libs/xUtils-2.6.14.jar')
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+    compile files('libs/AMap2DMap_2.8.1_AMapLocation_2.4.1_20160425.jar')
+
+
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.flyco.banner:FlycoBanner_Lib:2.0.2@aar'
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+
+}

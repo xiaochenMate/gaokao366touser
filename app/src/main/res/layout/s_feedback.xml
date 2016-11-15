@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <com.gaokao366.gaokao366touser.model.widget.TitleBar
+        android:id="@+id/mTitleBar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:background="@color/white" >
+
+        <EditText
+            android:id="@+id/et_content"
+            style="@style/tvStyle_black"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="@dimen/dp40"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@null"
+            android:maxEms="200"
+            android:gravity="left"
+            android:hint="请留下您宝贵的意见,我们一定努力改进"
+            android:textColorHint="@color/gray" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"
+            android:layout_marginBottom="@dimen/dp40"
+            android:src="@mipmap/line" />
+
+        <TextView
+            android:id="@+id/tv_num"
+            style="@style/tvStyle_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp15"
+            android:text="0/200" />
+    </RelativeLayout>
+
+</LinearLayout>

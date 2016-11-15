@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="red">#FF0000</color>
+    <color name="redline">#915082</color>
+    <color name="blueLight">#B3ECDA</color>
+    <color name="light_blue">#099CFF</color>
+    <color name="tran_blue">#55099CFF</color>
+    <color name="black">#000000</color>
+    <color name="default_color">#333333</color>
+    <color name="pink">#EA4100</color>
+    <color name="transparent">#00000000</color>
+    <color name="popBack">#009D9D9D</color>
+    <color name="gray_kedu_deep">#9D9D9D</color>
+    <color name="gray_kedu_light">#559D9D9D</color>
+    <color name="gray_tran">#222E2E2E</color>
+    <color name="common_title_bar">#47A9DC</color>
+    <color name="item_select">#e6eff4</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="bg_color">#F1F1F1</color>
+    <color name="health_item_content">#BDDDB4</color>
+    <color name="province_line_border">#D0D0D0</color>
+
+    <color name="tv_black">#202020</color>
+    <color name="tv_black_light">#666666</color>
+    <color name="title_color">#fdaa06</color>
+    <color name="gray">#868686</color>
+    <color name="gray_title">#F8F8F8</color>
+    <color name="gray_light">#cccccc</color>
+    <color name="gray_lighter">#dddddd</color>
+    <color name="gray_trans">#55dddddd</color>
+    <color name="blue">#2494e4</color>
+    <color name="tv_blue">#5ec1f9</color>
+    <color name="deepblue">#2F4C62</color>
+    <color name="tv_gray">#9D9D9D</color>
+    <color name="green">#36CCAE</color>
+    <color name="yellow">#fdaa06</color>
+    <color name="red_light">#F994AB</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_light">#BBBBBB</color>
+    <color name="orange">#BBBBBB</color>
+
+    <color name="divider">#E5E5E5</color>
+    <color name="shadow">#AAEBEBEB</color>
+    <color name="common_bg">#FAFAFA</color>
+    <color name="content_bg">#F3F3F3</color>
+    <color name="gray_deep">#5c5c5c</color>
+    <color name="alpha_gray">#CC646464</color>
+    <color name="theme_gray">#646464</color>
+
+</resources>

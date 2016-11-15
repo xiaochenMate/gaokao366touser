@@ -1,0 +1,217 @@
+<resources>
+
+    Base application theme.
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+
+
+
+
+
+
+
+    <style name="AppBaseTheme" parent="android:Theme.Light"></style>
+
+    <!--<style name="AppTheme" parent="AppBaseTheme"></style>-->
+
+    <style name="CustomDialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="MyDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <!-- 设置未浮动窗口 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 设置无边框 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 设置无标题 -->
+        <item name="android:windowBackground">@color/transparent</item>
+        <!-- 设置完全透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 设置屏幕变暗 -->
+    </style>
+
+    <!-- activity启动关闭动画 -->
+    <style name="ThemeActivity" mce_bogus="1" parent="AppBaseTheme">
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <!-- activity启动关闭动画 -->
+    <style name="ThemeActivityNoAnimation" mce_bogus="1" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <style name="transparentstyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@android:color/transparent</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimAmount">0.3</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <style name="AnimationActivity" mce_bogus="1" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/activity_right_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/activity_right_exit</item>
+        <item name="android:activityCloseEnterAnimation">@anim/activity_left_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/activity_left_exit</item>
+    </style>
+
+    <style name="AnimationDialog">
+        <item name="android:windowEnterAnimation">@anim/dialog_bottom_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_bottom_exit</item>
+    </style>
+
+    <style name="main_tab">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">100</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="tvStyle_gray">
+        <item name="android:textColor">@color/tv_gray</item>
+        <item name="android:textSize">@dimen/sp_common</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_gray_big">
+        <item name="android:textColor">@color/tv_gray</item>
+        <item name="android:textSize">@dimen/sp_big</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_gray_small">
+        <item name="android:textColor">@color/tv_gray</item>
+        <item name="android:textSize">@dimen/sp_small</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_gray_smaller">
+        <item name="android:textColor">@color/tv_gray</item>
+        <item name="android:textSize">@dimen/sp_smaller</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_white_big">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_big</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_common</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_white_small">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_small</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_white_smaller">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_smaller</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_black">
+        <item name="android:textColor">@color/tv_black</item>
+        <item name="android:textSize">@dimen/sp_common</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_black_small">
+        <item name="android:textColor">@color/tv_black</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textSize">@dimen/sp_small</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_black_smaller">
+        <item name="android:textColor">@color/tv_black</item>
+        <item name="android:textSize">@dimen/sp_smaller</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_blue">
+        <item name="android:textColor">@color/tv_blue</item>
+        <item name="android:textSize">@dimen/sp_common</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_blue_small">
+        <item name="android:textColor">@color/tv_blue</item>
+        <item name="android:textSize">@dimen/sp_small</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_blue_smaller">
+        <item name="android:textColor">@color/tv_blue</item>
+        <item name="android:textSize">@dimen/sp_smaller</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_deepblue">
+        <item name="android:textColor">@color/deepblue</item>
+        <item name="android:textSize">@dimen/sp_common</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_deepblue_small">
+        <item name="android:textColor">@color/deepblue</item>
+        <item name="android:textSize">@dimen/sp_small</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_orenge">
+        <item name="android:textColor">@color/orange</item>
+        <item name="android:textSize">@dimen/sp_common</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_orenge_small">
+        <item name="android:textColor">@color/orange</item>
+        <item name="android:textSize">@dimen/sp_small</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <style name="LetterIndexTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/side_letter_bar_width</item>
+        <item name="android:paddingTop">@dimen/dp10</item>
+        <item name="android:paddingBottom">@dimen/dp10</item>
+        <item name="android:textSize">@dimen/sp_common</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+</resources>

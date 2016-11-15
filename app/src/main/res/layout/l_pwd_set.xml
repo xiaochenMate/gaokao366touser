@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <com.gaokao366.gaokao366touser.model.widget.TitleBar
+        android:id="@+id/titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/et_password"
+        style="@style/tvStyle_black"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_common"
+        android:layout_marginTop="30dp"
+        android:background="@color/white"
+        android:ems="16"
+        android:gravity="left|center_vertical"
+        android:hint="新密码"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/black" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dip"
+        android:background="@color/white"
+        android:paddingRight="10dp" >
+
+        <EditText
+            android:id="@+id/et_repassword"
+            style="@style/tvStyle_black"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_common"
+            android:background="@color/white"
+            android:layout_centerVertical="true"
+            android:ems="16"
+            android:gravity="left|center_vertical"
+            android:hint="确认密码"
+             android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:textColorHint="@color/black" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/l_loginbtn_selector"
+        android:padding="10dp"
+        android:text="完成"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+      android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <com.gaokao366.gaokao366touser.model.widget.TitleBar
+        android:id="@+id/mTitleBar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp" >
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_common"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/vu_versionLocal"
+            style="@style/tvStyle_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/app_name" />
+
+        <RelativeLayout
+            android:id="@+id/vu_rl_update"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp_common"
+            android:layout_below="@id/vu_versionLocal"
+            android:layout_margin="30dp"
+            android:background="@mipmap/common_rl" >
+
+            <TextView
+                style="@style/tvStyle_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/versioncode" />
+
+            <TextView
+                android:id="@+id/vu_version"
+                style="@style/tvStyle_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:text="1.1" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_common"
+        android:layout_margin="30dp" >
+
+        <ProgressBar
+            android:id="@+id/vu_pb"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:progressDrawable="@drawable/s_progressbar_downloading" />
+
+        <TextView
+            android:id="@+id/vu_downLoad"
+            style="@style/tvStyle_white"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/l_loginbtn_selector"
+            android:text="@string/checkingUpdate" />
+        
+        <ProgressBar
+            android:id="@+id/vu_pb_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_alignParentRight="true" />
+        
+    </RelativeLayout>
+
+</LinearLayout>

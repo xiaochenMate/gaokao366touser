@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+      android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:gravity="top"
+    android:orientation="vertical" >
+
+    <com.gaokao366.gaokao366touser.model.widget.TitleBar
+        android:id="@+id/mTitleBar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height" />
+
+    <com.gaokao366.gaokao366touser.model.widget.MySettingView
+        android:id="@+id/s_help"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line" />
+
+    <com.gaokao366.gaokao366touser.model.widget.MySettingView
+        android:id="@+id/s_about"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line" />
+
+    <com.gaokao366.gaokao366touser.model.widget.MySettingView
+        android:id="@+id/s_feedBack"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_common" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line" />
+
+    <com.gaokao366.gaokao366touser.model.widget.MySettingView
+        android:id="@+id/s_clear"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_common" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line" />
+
+    <com.gaokao366.gaokao366touser.model.widget.MySettingView
+        android:id="@+id/s_update"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_common" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line" />
+
+    <Button
+        android:id="@+id/s_quit"
+        style="@style/tvStyle_white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="@dimen/dp_common"
+        android:background="@drawable/l_loginbtn_selector"
+        android:text="退出" />
+
+</LinearLayout>
