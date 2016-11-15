@@ -20,6 +20,7 @@ public class GuideActivity extends AppCompatActivity {
         decorView = getWindow().getDecorView();
         sgb();
 
+
     }
 
     private void sgb() {
