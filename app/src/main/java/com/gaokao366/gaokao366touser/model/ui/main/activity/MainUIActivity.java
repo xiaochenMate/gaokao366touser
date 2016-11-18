@@ -52,8 +52,8 @@ public class MainUIActivity extends BaseActivity {
     public void initView() {
         bindViews();
         fragments.add(new HomeFragment());
-        fragments.add(new MsgFragment());
         fragments.add(new TripFragment());
+        fragments.add(new MsgFragment());
         fragments.add(new MineFragment());
         m_viewPager.setAdapter(mFragmentAdapter);
         m_bottom.setViewPager(m_viewPager);
