@@ -1,31 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:banner="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#59000000"
     android:orientation="vertical">
 
     <RelativeLayout
-        android:id="@+id/rl_banner_homefragment"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp200">
+        android:id="@+id/rl_left"
+        android:layout_width="900px"
+        android:layout_height="match_parent">
 
-        <android.support.v4.view.ViewPager
-            android:id="@+id/h_banner_viewPager"
+        <RelativeLayout
+            android:id="@+id/rl_banner"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"  />
+            android:layout_height="wrap_content"
+            android:padding="@dimen/px5">
 
-        <TextView
-            android:id="@+id/tv_locPlace_homefm"
-            android:layout_width="@dimen/dp60"
-            android:layout_height="@dimen/dp35"
-            android:layout_marginLeft="@dimen/dp20"
-            android:layout_marginTop="10dp"
-            android:background="#99000000"
-            android:gravity="center"
-            android:text="@string/locationPlace"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
+            <com.gaokao366.gaokao366touser.SimpleImageBanner
+                android:id="@+id/sib_the_most_comlex_usage"
+                android:layout_width="match_parent"
+                android:layout_height="400px"
+                banner:bb_barColor="#00000000"
+                banner:bb_barPaddingBottom="5dp"
+                banner:bb_barPaddingLeft="10dp"
+                banner:bb_barPaddingRight="10dp"
+                banner:bb_barPaddingTop="5dp"
+                banner:bb_delay="2"
+                banner:bb_indicatorCornerRadius="3dp"
+                banner:bb_indicatorGap="8dp"
+                banner:bb_indicatorGravity="RIGHT"
+                banner:bb_indicatorHeight="6dp"
+                banner:bb_indicatorSelectColor="#ffffff"
+                banner:bb_indicatorStyle="CORNER_RECTANGLE"
+                banner:bb_indicatorUnselectColor="#88ffffff"
+                banner:bb_indicatorWidth="6dp"
+                banner:bb_isAutoScrollEnable="true"
+                banner:bb_isBarShowWhenLast="true"
+                banner:bb_isIndicatorShow="true"
+                banner:bb_isLoopEnable="true"
+                banner:bb_isTitleShow="true"
+                banner:bb_period="5"
+                banner:bb_scale="0.5625"
+                banner:bb_textColor="#ffffff"
+                banner:bb_textSize="13.5sp" />
+
+            <TextView
+                android:id="@+id/tv_locPlace_homefm"
+                android:layout_width="@dimen/dp60"
+                android:layout_height="@dimen/dp35"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="10dp"
+                android:background="#99000000"
+                android:gravity="center"
+                android:text="@string/locationPlace"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_banner">
+
+            <RelativeLayout
+                android:id="@+id/rl_paper"
+                android:layout_width="600px"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/px5"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:id="@+id/seeall"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px80"
+                    android:background="#99000000">
+
+                    <TextView
+                        android:layout_width="@dimen/px200"
+                        android:layout_height="@dimen/px80"
+                        android:layout_marginLeft="@dimen/px10"
+                        android:gravity="center_vertical"
+                        android:text="@string/zhenti"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="@dimen/px200"
+                        android:layout_height="@dimen/px80"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/px10"
+                        android:gravity="center_vertical|right"
+                        android:text="@string/seeall"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <com.gaokao366.gaokao366touser.model.widget.NoSlidingGridView
+                    android:id="@+id/gridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/seeall"
+                    android:layout_marginLeft="@dimen/px10"
+                    android:layout_marginTop="@dimen/px10"
+                    android:cacheColorHint="#00000000"
+                    android:horizontalSpacing="@dimen/px5"
+                    android:listSelector="#00000000"
+                    android:numColumns="4"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="@dimen/px5"></com.gaokao366.gaokao366touser.model.widget.NoSlidingGridView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_watch"
+                android:layout_width="300px"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/px5"
+                android:layout_toRightOf="@+id/rl_paper"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:id="@+id/watch"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px80"
+                    android:background="#99000000">
+
+                    <TextView
+                        android:layout_width="@dimen/px200"
+                        android:layout_height="@dimen/px80"
+                        android:layout_marginLeft="@dimen/px10"
+                        android:gravity="center_vertical"
+                        android:text="@string/subscribe"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="@dimen/px200"
+                        android:layout_height="@dimen/px80"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/px10"
+                        android:gravity="center_vertical|right"
+                        android:text="@string/seeall"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <com.gaokao366.gaokao366touser.model.widget.NoSlidingListView
+                    android:id="@+id/lv_watch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/watch"
+                    android:cacheColorHint="#00000000"
+                    android:horizontalSpacing="10dp"
+                    android:listSelector="#00000000"
+                    android:verticalSpacing="10dp"></com.gaokao366.gaokao366touser.model.widget.NoSlidingListView>
+
+            </RelativeLayout>
+        </RelativeLayout>
     </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/rl_left">
 
-</LinearLayout>
+        <RelativeLayout
+            android:id="@+id/rl_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/px5">
+
+
+            <com.gaokao366.gaokao366touser.model.widget.NoSlidingGridView
+                android:id="@+id/gv_subject"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:listSelector="#00000000"
+                android:numColumns="2"
+                android:stretchMode="columnWidth"></com.gaokao366.gaokao366touser.model.widget.NoSlidingGridView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_subject"
+            android:layout_margin="@dimen/px5">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/main_cam" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

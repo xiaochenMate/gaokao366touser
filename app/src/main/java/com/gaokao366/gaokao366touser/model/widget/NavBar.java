@@ -7,14 +7,15 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.gaokao366.gaokao366touser.R;
 import com.gaokao366.gaokao366touser.model.framework.util.LogUtil;
 
 
-/**
- * Created by hh on 2016/5/17.
- */
+//  rujingyouapp1.0
+//
+//  Copyright  2016年 shengmei. All rights reserved.
 public class NavBar extends LinearLayout implements View.OnClickListener {
 
     private Context ct;
@@ -23,15 +24,19 @@ public class NavBar extends LinearLayout implements View.OnClickListener {
 
     private LinearLayout ll_home;
     private ImageView iv_home;
-    private LinearLayout ll_msg;
-    private ImageView iv_msg;
-    private LinearLayout ll_trip;
-    private ImageView iv_trip;
+    private LinearLayout ll_itinerary;
+    private ImageView iv_itinerary;
+    private LinearLayout ll_service;
+    private ImageView iv_service;
     private LinearLayout ll_mine;
     private ImageView iv_mine;
     private ViewPager mViewPager;
     private OnItemChangedListener onItemChangedListener;
     private int mCurrentItem = 0;
+    private TextView tv_home;
+    private TextView tv_itinerary;
+    private TextView tv_service;
+    private TextView tv_mine;
 
     public NavBar(Context context) {
         this(context, null, -1);
@@ -50,27 +55,38 @@ public class NavBar extends LinearLayout implements View.OnClickListener {
     private void init() {
         View view = View.inflate(ct, R.layout.m_bottom, this);
         bindViews(view);
+
+        /*String language = SharedPrefHelper.getInstance().getLanguage().equals("") ? Locale.getDefault().toString() : SharedPrefHelper.getInstance().getLanguage();
+        if(language.equals("ru_RU")){
+            tv_home.setTextSize(12);
+        }*/
     }
 
     // End Of Content View Elements
-
     private void bindViews(View view) {
 
         ll_home = (LinearLayout) view.findViewById(R.id.ll_home);
         iv_home = (ImageView) view.findViewById(R.id.iv_home);
-        ll_msg = (LinearLayout) view.findViewById(R.id.ll_msg);
-        iv_msg = (ImageView) view.findViewById(R.id.iv_msg);
-        ll_trip = (LinearLayout) view.findViewById(R.id.ll_trip);
-        iv_trip = (ImageView) view.findViewById(R.id.iv_trip);
+        tv_home = (TextView) view.findViewById(R.id.tv_home);
+        iv_home.setSelected(true);
+
+        ll_itinerary = (LinearLayout) view.findViewById(R.id.ll_itinerary);
+        iv_itinerary = (ImageView) view.findViewById(R.id.iv_itinerary);
+        tv_itinerary = (TextView) view.findViewById(R.id.tv_itinerary);
+
+        ll_service = (LinearLayout) view.findViewById(R.id.ll_service);
+        iv_service = (ImageView) view.findViewById(R.id.iv_service);
+        tv_service = (TextView) view.findViewById(R.id.tv_service);
+
         ll_mine = (LinearLayout) view.findViewById(R.id.ll_mine);
         iv_mine = (ImageView) view.findViewById(R.id.iv_mine);
+        tv_mine = (TextView) view.findViewById(R.id.tv_mine);
 
         ll_home.setOnClickListener(this);
-        ll_msg.setOnClickListener(this);
-        ll_trip.setOnClickListener(this);
+        ll_itinerary.setOnClickListener(this);
+        ll_service.setOnClickListener(this);
         ll_mine.setOnClickListener(this);
     }
-
 
     @Override
     public void onClick(View view) {
@@ -79,10 +95,10 @@ public class NavBar extends LinearLayout implements View.OnClickListener {
             case R.id.ll_home:
                 clickPosition = 0;
                 break;
-            case R.id.ll_msg:
+            case R.id.ll_itinerary:
                 clickPosition = 1;
                 break;
-            case R.id.ll_trip:
+            case R.id.ll_service:
                 clickPosition = 2;
                 break;
             case R.id.ll_mine:
@@ -91,7 +107,6 @@ public class NavBar extends LinearLayout implements View.OnClickListener {
         }
         setItemChecked(clickPosition);
     }
-
 
     public void setItemChecked(int position) {
 
@@ -113,12 +128,48 @@ public class NavBar extends LinearLayout implements View.OnClickListener {
         //处理一些颜色的变化
         switch (position) {
             case 0:
+                tv_home.setTextColor(getResources().getColor(R.color.red));
+                tv_itinerary.setTextColor(getResources().getColor(R.color.gray));
+                tv_service.setTextColor(getResources().getColor(R.color.gray));
+                tv_mine.setTextColor(getResources().getColor(R.color.gray));
+
+                iv_home.setSelected(true);
+                iv_itinerary.setSelected(false);
+                iv_service.setSelected(false);
+                iv_mine.setSelected(false);
                 break;
             case 1:
+                tv_home.setTextColor(getResources().getColor(R.color.gray));
+                tv_itinerary.setTextColor(getResources().getColor(R.color.red));
+                tv_service.setTextColor(getResources().getColor(R.color.gray));
+                tv_mine.setTextColor(getResources().getColor(R.color.gray));
+
+                iv_home.setSelected(false);
+                iv_itinerary.setSelected(true);
+                iv_service.setSelected(false);
+                iv_mine.setSelected(false);
                 break;
             case 2:
+                tv_home.setTextColor(getResources().getColor(R.color.gray));
+                tv_itinerary.setTextColor(getResources().getColor(R.color.gray));
+                tv_service.setTextColor(getResources().getColor(R.color.red));
+                tv_mine.setTextColor(getResources().getColor(R.color.gray));
+
+                iv_home.setSelected(false);
+                iv_itinerary.setSelected(false);
+                iv_service.setSelected(true);
+                iv_mine.setSelected(false);
                 break;
             case 3:
+                tv_home.setTextColor(getResources().getColor(R.color.gray));
+                tv_itinerary.setTextColor(getResources().getColor(R.color.gray));
+                tv_service.setTextColor(getResources().getColor(R.color.gray));
+                tv_mine.setTextColor(getResources().getColor(R.color.red));
+
+                iv_home.setSelected(false);
+                iv_itinerary.setSelected(false);
+                iv_service.setSelected(false);
+                iv_mine.setSelected(true);
                 break;
         }
 
@@ -134,8 +185,8 @@ public class NavBar extends LinearLayout implements View.OnClickListener {
         mViewPager.addOnPageChangeListener(mOnPageChangeListener);
     }
 
-
     OnPageChangeListener mOnPageChangeListener = new OnPageChangeListener() {
+
         @Override
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
         }

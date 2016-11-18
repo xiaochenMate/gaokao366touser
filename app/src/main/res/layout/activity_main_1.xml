@@ -5,17 +5,20 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px60"
+        android:background="@color/gray"
+        android:visibility="gone"></LinearLayout>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/m_viewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
-    </android.support.v4.view.ViewPager>
+        android:layout_weight="1"></android.support.v4.view.ViewPager>
 
     <com.gaokao366.gaokao366touser.model.widget.NavBar
         android:id="@+id/m_bottom"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/bottom_height">
-    </com.gaokao366.gaokao366touser.model.widget.NavBar>
+        android:layout_height="@dimen/bottom_height"></com.gaokao366.gaokao366touser.model.widget.NavBar>
 </LinearLayout>

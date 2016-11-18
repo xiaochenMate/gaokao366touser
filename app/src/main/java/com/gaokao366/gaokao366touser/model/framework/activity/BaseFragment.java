@@ -1,6 +1,7 @@
 package com.gaokao366.gaokao366touser.model.framework.activity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -31,28 +32,29 @@ public abstract class BaseFragment extends Fragment implements INetChangedListen
     protected SoftApplication softApplication;
     private CustomerDialog progressDialog;
     private View inflate;
-    private int contentViewRes=-1;
+    private int contentViewRes = -1;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        softApplication=SoftApplication.softApplication;
+        softApplication = SoftApplication.softApplication;
         super.onCreate(savedInstanceState);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        if(inflate==null) {
-            LogUtil.log(getClass().getName()+ "初始化" );
+        if (inflate == null) {
+            LogUtil.log(getClass().getName() + "初始化");
             setContentLayout(savedInstanceState);
-            if(contentViewRes==-1){
+            if (contentViewRes == -1) {
                 LogUtil.log("未设置布局");
                 return null;
             }
             inflate = inflater.inflate(contentViewRes, null);
             if (inflate != null)
                 initView(inflate);
-        }else{
-            LogUtil.log( getClass().getName()+ "再次加载,无需初始化" );
+        } else {
+            LogUtil.log(getClass().getName() + "再次加载,无需初始化");
         }
         return inflate;
     }
@@ -61,7 +63,7 @@ public abstract class BaseFragment extends Fragment implements INetChangedListen
     @Override
     public void onDestroy() {
         super.onDestroy();
-        LogUtil.log(getClass().getName()+"[onDestroy]");
+        LogUtil.log(getClass().getName() + "[onDestroy]");
         NetChangeManager.newInstance(softApplication).removeMinitor(this);
     }
 
@@ -69,9 +71,10 @@ public abstract class BaseFragment extends Fragment implements INetChangedListen
 
     public abstract void initView(View v);
 
-    public void setContentView(int resId){
+    public void setContentView(int resId) {
         this.contentViewRes = resId;
     }
+
     /**
      * 短时间显示Toast
      *

@@ -8,6 +8,7 @@ import com.flyco.banner.transform.FlowTransformer;
 import com.flyco.banner.transform.RotateDownTransformer;
 import com.flyco.banner.transform.RotateUpTransformer;
 import com.flyco.banner.transform.ZoomOutSlideTransformer;
+import com.gaokao366.gaokao366touser.model.ui.main.bean.ExamPaperBean;
 
 import java.util.ArrayList;
 
@@ -18,6 +19,23 @@ public class DataProvider {
             "花千骨:尊上沦为花千骨",
             "综艺饭:胖轩偷看夏天洗澡掀波澜",
             "碟中谍4:阿汤哥高塔命悬一线,超越不可能",
+    };
+    public static String[] examType = new String[]{
+            "数学",
+            "英语",
+            "语文",
+            "理综",
+    };
+    public static String[] subjectType = new String[]{
+            "语文",
+            "数学",
+            "英语",
+            "物理",
+            "化学",
+            "生物",
+            "政治",
+            "历史",
+            "地理",
     };
     public static String[] urls = new String[]{//640*360 360/640=0.5625
             "http://photocdn.sohu.com/tvmobilemvms/20150907/144160323071011277.jpg",//伪装者:胡歌演绎"痞子特工"
@@ -49,6 +67,44 @@ public class DataProvider {
 
         return list;
     }
+
+
+    public static ArrayList<ExamPaperBean> getExamPaperBean() {
+        ArrayList<ExamPaperBean> list = new ArrayList<ExamPaperBean>();
+        for (int i = 0; i < 4; i++) {
+            ExamPaperBean item = new ExamPaperBean();
+            item.name = examType[i];
+
+            list.add(item);
+        }
+
+        return list;
+    }
+
+    public static ArrayList<ExamPaperBean> getWatchBean() {
+        ArrayList<ExamPaperBean> list = new ArrayList<ExamPaperBean>();
+        for (int i = 0; i < 2; i++) {
+            ExamPaperBean item = new ExamPaperBean();
+            item.name = titles[i];
+
+            list.add(item);
+        }
+
+        return list;
+    }
+
+    public static ArrayList<ExamPaperBean> getSubjecyBean() {
+        ArrayList<ExamPaperBean> list = new ArrayList<ExamPaperBean>();
+        for (int i = 0; i < subjectType.length; i++) {
+            ExamPaperBean item = new ExamPaperBean();
+            item.name = subjectType[i];
+
+            list.add(item);
+        }
+
+        return list;
+    }
+
 
     public static Class<? extends ViewPager.PageTransformer> transformers[] = new Class[]{
             DepthTransformer.class,
