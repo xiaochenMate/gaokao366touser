@@ -30,7 +30,7 @@ public class MainUIActivity extends BaseActivity {
     // Content View Elements
 
 //法规法规和法国 到岗发过火
-    //1904_A的分支测试
+    //1906_A的分支测试
     private ViewPager m_viewPager;
     private NavBar m_bottom;
     private List<Fragment> fragments = new ArrayList<>();
