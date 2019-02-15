@@ -31,6 +31,7 @@ public class MainUIActivity extends BaseActivity {
 
 //法规法规和法国 到岗发过火
     //1905_A的分支测试
+    //1903_A的分支测试merger
     private ViewPager m_viewPager;
     private NavBar m_bottom;
     private List<Fragment> fragments = new ArrayList<>();
